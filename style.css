@@ -1,5 +1,4 @@
 /* Default styles for all screen sizes */
-
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -8,9 +7,9 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #f0f0f0;
-    /* Example background color */
+    /* Light background for contrast */
     color: #333;
-    /* Example text color */
+    /* Dark text for contrast */
 }
 
 header,
@@ -32,6 +31,15 @@ button {
     margin-top: 20px;
 }
 
+/* Feedback Styles */
+.feedback-correct {
+    color: green;
+}
+
+.feedback-incorrect {
+    color: red;
+}
+
 /* Media queries for responsiveness */
 
 /* Small screens */
@@ -47,8 +55,6 @@ button {
         padding: 10px;
         /* Adjust padding for small screens */
     }
-
-    /* Add more responsive styling for other elements as needed */
 }
 
 /* Medium screens */
@@ -64,8 +70,6 @@ button {
         padding: 20px;
         /* Adjust padding for medium screens */
     }
-
-    /* Add more responsive styling for other elements as needed */
 }
 
 /* Large screens */
@@ -81,6 +85,4 @@ button {
         padding: 30px;
         /* Adjust padding for larger screens */
     }
-
-    /* Add more responsive styling for other elements as needed */
 }

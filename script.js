@@ -1,4 +1,4 @@
-//Get API questions
+// Fetch API questions
 async function fetchRandomQuestions(amount, category, difficulty) {
     const apiUrl = `https://opentdb.com/api.php?amount=${amount}&category=${category}&difficulty=${difficulty}&type=multiple`;
     try {
@@ -58,13 +58,22 @@ function deselectAnswers() {
 
 // Get selected answer
 function getSelected() {
-    let answer = undefined;
+    let answer;
     document.querySelectorAll('input[name="answer"]').forEach(answerEl => {
         if (answerEl.checked) {
             answer = answerEl.value;
         }
     });
     return answer;
+}
+
+// Show feedback for answers
+function showFeedback(isCorrect) {
+    const feedbackEl = document.createElement('div');
+    feedbackEl.textContent = isCorrect ? 'Correct!' : 'Incorrect!';
+    feedbackEl.className = isCorrect ? 'feedback-correct' : 'feedback-incorrect';
+    document.body.appendChild(feedbackEl);
+    setTimeout(() => feedbackEl.remove(), 2000); // Remove feedback after 2 seconds
 }
 
 // Show results at quiz end
@@ -81,7 +90,9 @@ submitBtn.addEventListener('click', () => {
     const answer = getSelected();
 
     if (answer) {
-        if (answer === quizData[currentQuestion].correct) {
+        const isCorrect = answer === quizData[currentQuestion].correct;
+        showFeedback(isCorrect);
+        if (isCorrect) {
             score++;
         }
 
