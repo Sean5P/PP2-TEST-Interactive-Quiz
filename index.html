@@ -8,13 +8,21 @@
   </head>
 
   <body>
-    <div id="quiz-container">
+    <header>
       <h1>Interactive Trivia Quiz</h1>
-      <div id="question"></div>
-      <ul id="answerList"></ul>
-      <button id="submit">Submit Answer</button>
-      <div id="score"></div>
-    </div>
+    </header>
+    <main>
+      <section id="quiz-container">
+        <h2>Quiz Questions</h2>
+        <div id="question"></div>
+        <ul id="answerList" role="radiogroup"></ul>
+        <button id="submit">Submit Answer</button>
+        <div id="score" aria-live="polite"></div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2023 Interactive Quiz</p>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
