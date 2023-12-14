@@ -15,7 +15,7 @@ async function fetchRandomQuestions(amount, category, difficulty) {
     }
 }
 
-// Shuffle answers
+// Shuffle Answers
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -24,7 +24,7 @@ function shuffleArray(array) {
     return array;
 }
 
-let quizData = []; // Array to hold questions
+let quizData = []; // Array to Hold Questions
 let currentQuestion = 0;
 let score = 0;
 
@@ -32,7 +32,7 @@ const questionEl = document.getElementById('question');
 const answerEls = document.getElementById('answerList');
 const submitBtn = document.getElementById('submit');
 
-// Load a quiz question
+// Load Quiz Question
 function loadQuestion() {
     deselectAnswers();
     const currentQuizData = quizData[currentQuestion];
@@ -49,14 +49,14 @@ function loadQuestion() {
     });
 }
 
-// Deselect all answers
+// Deselect All Answers
 function deselectAnswers() {
     document.querySelectorAll('input[name="answer"]').forEach(answerEl => {
         answerEl.checked = false;
     });
 }
 
-// Get selected answer
+// Get Selected Aanswer
 function getSelected() {
     let answer;
     document.querySelectorAll('input[name="answer"]').forEach(answerEl => {
@@ -67,16 +67,16 @@ function getSelected() {
     return answer;
 }
 
-// Show feedback for answers
+// Show Answer Feedback
 function showFeedback(isCorrect) {
     const feedbackEl = document.createElement('div');
     feedbackEl.textContent = isCorrect ? 'Correct!' : 'Incorrect!';
     feedbackEl.className = isCorrect ? 'feedback-correct' : 'feedback-incorrect';
     document.body.appendChild(feedbackEl);
-    setTimeout(() => feedbackEl.remove(), 2000); // Remove feedback after 2 seconds
+    setTimeout(() => feedbackEl.remove(), 5000); // Remove Feedback after 5 seconds
 }
 
-// Show results at quiz end
+// Show Results at End of Quiz
 function showResults() {
     const quizContainer = document.getElementById('quiz-container');
     quizContainer.innerHTML = `
@@ -85,7 +85,7 @@ function showResults() {
     `;
 }
 
-// Submit button event listener
+// Submit Button Event Listener
 submitBtn.addEventListener('click', () => {
     const answer = getSelected();
 
@@ -107,14 +107,14 @@ submitBtn.addEventListener('click', () => {
     }
 });
 
-// Quiz start
+// Start Quiz
 async function initializeQuiz() {
-    quizData = await fetchRandomQuestions(10, 9, 'medium'); // Fetch 10 questions
+    quizData = await fetchRandomQuestions(10, 9, 'medium'); // Fetch 10 Questions
     if (quizData.length > 0) {
-        loadQuestion(); // Load the first question
+        loadQuestion(); // Load First Question
     } else {
         alert("Failed to load quiz questions. Please try again.");
     }
 }
 
-initializeQuiz(); // Start the quiz
+initializeQuiz(); // Start Quiz
