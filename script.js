@@ -1,4 +1,4 @@
-// Get API questions
+//Get API questions
 async function fetchRandomQuestions(amount, category, difficulty) {
     const apiUrl = `https://opentdb.com/api.php?amount=${amount}&category=${category}&difficulty=${difficulty}&type=multiple`;
     try {
