@@ -1,3 +1,5 @@
+/* Default styles for all screen sizes */
+
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -5,9 +7,15 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    background-color: #f0f0f0;
+    /* Example background color */
+    color: #333;
+    /* Example text color */
 }
 
-#quiz-container {
+header,
+main,
+footer {
     text-align: center;
 }
 
@@ -22,4 +30,57 @@ li {
 
 button {
     margin-top: 20px;
+}
+
+/* Media queries for responsiveness */
+
+/* Small screens */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+        /* Adjust font size for smaller screens */
+    }
+
+    #quiz-container {
+        width: 90%;
+        /* Adjust width for small screens */
+        padding: 10px;
+        /* Adjust padding for small screens */
+    }
+
+    /* Add more responsive styling for other elements as needed */
+}
+
+/* Medium screens */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    body {
+        font-size: 16px;
+        /* Adjust font size for medium screens */
+    }
+
+    #quiz-container {
+        width: 70%;
+        /* Adjust width for medium screens */
+        padding: 20px;
+        /* Adjust padding for medium screens */
+    }
+
+    /* Add more responsive styling for other elements as needed */
+}
+
+/* Large screens */
+@media screen and (min-width: 1025px) {
+    body {
+        font-size: 18px;
+        /* Adjust font size for larger screens */
+    }
+
+    #quiz-container {
+        width: 60%;
+        /* Adjust width for larger screens */
+        padding: 30px;
+        /* Adjust padding for larger screens */
+    }
+
+    /* Add more responsive styling for other elements as needed */
 }
