@@ -1,15 +1,11 @@
-/* Default Styles (All Screen Sizes) */
+/* Default styles optimized for mobile screens */
+
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
+    padding: 20px;
     background-color: #f0f0f0;
-    /* Light Background for Contrast */
     color: #333;
-    /* Dark Text for Contrast */
 }
 
 header,
@@ -40,49 +36,37 @@ button {
     color: red;
 }
 
-/* Media Queries */
+#quiz-container {
+    width: 100%;
+    /* Full width on small screens */
+    box-sizing: border-box;
+    /* Include padding in width calculation */
+}
 
-/* Small Screens */
-@media screen and (max-width: 768px) {
+/* Media queries for larger screens */
+
+/* Medium screens */
+@media screen and (min-width: 600px) {
     body {
-        font-size: 14px;
-        /* Adjust Font Size on Smaller Screens */
+        padding: 40px;
     }
 
     #quiz-container {
-        width: 90%;
-        /* Adjust Width on Small Screens */
-        padding: 10px;
-        /* Adjust Padding on Small Screens */
+        width: 80%;
+        /* Adjust width for medium screens */
+        margin: auto;
+        /* Center the container */
     }
 }
 
-/* Medium Screens */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+/* Large screens */
+@media screen and (min-width: 1024px) {
     body {
-        font-size: 16px;
-        /* Adjust Font Size on Medium Screens */
-    }
-
-    #quiz-container {
-        width: 70%;
-        /* Adjust Width on Medium Screens */
-        padding: 20px;
-        /* Adjust Padding on Medium Screens */
-    }
-}
-
-/* Large Screens */
-@media screen and (min-width: 1025px) {
-    body {
-        font-size: 18px;
-        /* Adjust Font Size on Large Screens */
+        padding: 60px;
     }
 
     #quiz-container {
         width: 60%;
-        /* Adjust Width on Large Screens */
-        padding: 30px;
-        /* Adjust Padding on Large Screens */
+        /* Adjust width for large screens */
     }
 }

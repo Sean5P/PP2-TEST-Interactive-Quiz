@@ -73,7 +73,7 @@ function showFeedback(isCorrect) {
     feedbackEl.textContent = isCorrect ? 'Correct!' : 'Incorrect!';
     feedbackEl.className = isCorrect ? 'feedback-correct' : 'feedback-incorrect';
     document.body.appendChild(feedbackEl);
-    setTimeout(() => feedbackEl.remove(), 5000); // Remove Feedback after 5 seconds
+    setTimeout(() => feedbackEl.remove(), 3000); // Remove Feedback after 3 seconds
 }
 
 // Show Results at End of Quiz
@@ -109,7 +109,7 @@ submitBtn.addEventListener('click', () => {
 
 // Start Quiz
 async function initializeQuiz() {
-    quizData = await fetchRandomQuestions(10, 9, 'medium'); // Fetch 10 Questions
+    quizData = await fetchRandomQuestions(10, 9, 'easy'); // Fetch 10 Questions
     if (quizData.length > 0) {
         loadQuestion(); // Load First Question
     } else {
