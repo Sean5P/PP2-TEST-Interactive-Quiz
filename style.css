@@ -1,13 +1,43 @@
-/* Default styles optimized for mobile screens */
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
     background-color: #f0f0f0;
+    /* Light Base Color */
     color: #333;
+    background-image: linear-gradient(to right top, #6a11cb 0%, #2575fc 100%);
+    /* Gradient Background */
+    background-attachment: fixed;
+    /* Background Fixed when Scrolling */
 }
 
+/* Text Readable On Background */
+header h1,
+footer p {
+    color: #fff;
+    /* White Text for Better Ccontrast */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    /* Text Shadow for Readability */
+}
+
+/* Quiz Container Style to Enhance Readability */
+#quiz-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Semi-Transparent White Background */
+    padding: 20px;
+    border-radius: 8px;
+    /* Rounded Corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle Box Shadow */
+    width: 100%;
+    /* Full Width on Small Screens */
+    box-sizing: border-box;
+    /* Include Padding in Width Calculation */
+    margin-top: 20px;
+    /* Margin for Spacing */
+}
+
+/* Default Styles Optimized for Mobile Screens */
 header,
 main,
 footer {
@@ -36,16 +66,9 @@ button {
     color: red;
 }
 
-#quiz-container {
-    width: 100%;
-    /* Full width on small screens */
-    box-sizing: border-box;
-    /* Include padding in width calculation */
-}
+/* Media Queries for Larger Screens */
 
-/* Media queries for larger screens */
-
-/* Medium screens */
+/* Medium Screens */
 @media screen and (min-width: 600px) {
     body {
         padding: 40px;
@@ -53,13 +76,13 @@ button {
 
     #quiz-container {
         width: 80%;
-        /* Adjust width for medium screens */
+        /* Adjust Width for Medium Screens */
         margin: auto;
-        /* Center the container */
+        /* Center the Container */
     }
 }
 
-/* Large screens */
+/* Large Screens */
 @media screen and (min-width: 1024px) {
     body {
         padding: 60px;
