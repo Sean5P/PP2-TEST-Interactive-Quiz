@@ -26,4 +26,3 @@ The Interactive Trivia Quiz is a web-based application designed to offer users a
 - CSS3
 - JavaScript
 - [Open Trivia Database API](https://opentdb.com/)
-- 
