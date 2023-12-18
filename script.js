@@ -1,3 +1,6 @@
+/*jshint esversion: 8 */
+/*jshint asi: true */
+
 // Fetch API questions
 async function fetchRandomQuestions(amount, category, difficulty) {
     const apiUrl = `https://opentdb.com/api.php?amount=${amount}&category=${category}&difficulty=${difficulty}&type=multiple`;
