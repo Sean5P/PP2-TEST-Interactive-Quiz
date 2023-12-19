@@ -60,10 +60,12 @@ button {
 /* Feedback Styles */
 .feedback-correct {
     color: green;
+    text-align: center;
 }
 
 .feedback-incorrect {
     color: red;
+    text-align: center;
 }
 
 /* Media Queries for Larger Screens */
