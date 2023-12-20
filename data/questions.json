@@ -1,5 +1,5 @@
-[{"question":"Who is the president?","correct_answer":"Biden","incorrect_answers":["Obama","Varadkar","Johnson"]},
- {"question":"What year is it?","correct_answer":"2023","incorrect_answers":["2013","1999","2030"]},
+[{"question":"Who is the president of USA?","correct_answer":"Biden","incorrect_answers":["Obama","Varadkar","Johnson"]},
+ {"question":"What century is it?","correct_answer":"21st","incorrect_answers":["22nd","23rd","24th"]},
  {"question":"What is the capital of France?","correct_answer":"Paris","incorrect_answers":["Rome","Berlin","Madrid"]},
  {"question":"How many continents are there?","correct_answer":"7","incorrect_answers":["5","8","6"]},
  {"question":"What is the largest planet in our solar system?","correct_answer":"Jupiter","incorrect_answers":["Saturn","Mars","Venus"]},
