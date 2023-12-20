@@ -1,8 +1,7 @@
-
 /*jshint esversion: 8 */
 /*jshint asi: true */
 
-// Import SweetAlert2 if you are using a module bundler, otherwise include it via a script tag
+// Import SweetAlert2
 
 // Fetch API questions
 async function fetchRandomQuestions(amount, category, difficulty) {
