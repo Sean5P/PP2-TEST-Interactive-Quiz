@@ -5,9 +5,7 @@
 
 // Fetch API questions
 async function fetchRandomQuestions(amount, category, difficulty) {
-   // const apiUrl = `https://opentdb.com/api.php?amount=${amount}&category=${category}&difficulty=${difficulty}&type=multiple`;
-    
-      const apiUrl = 'https://sean5p.github.io/PP2/data/questions.json';
+  const apiUrl = 'https://sean5p.github.io/PP2/data/questions.json';
     try {
         const response = await fetch(apiUrl);
         const data = await response.json();
@@ -84,9 +82,6 @@ function showFeedback(isCorrect) {
         showConfirmButton: false
     });
 }
-
-
-
 // Show Results at End of Quiz
 function showResults() {
     Swal.fire({
@@ -123,7 +118,7 @@ submitBtn.addEventListener('click', () => {
 
 // Start Quiz
 async function initializeQuiz() {
-    quizData = await fetchRandomQuestions(10, 9, 'easy'); // Fetch 10 Questions
+    quizData = await fetchRandomQuestions; // (10, 9, 'easy') Fetch 10 Questions
     if (quizData.length > 0) {
         loadQuestion(); // Load First Question
     } else {
