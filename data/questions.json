@@ -1,200 +1,130 @@
-[
-  {
-    "question": "Who is the president of USA?",
-    "correct_answer": "Biden",
-    "incorrect_answers": [
-      "Obama",
-      "Varadkar",
-      "Johnson"
-    ]
-  },
-  {
-    "question": "What century is it?",
-    "correct_answer": "21st",
-    "incorrect_answers": [
-      "22nd",
-      "23rd",
-      "24th"
-    ]
-  },
-  {
-    "question": "What is the capital of France?",
-    "correct_answer": "Paris",
-    "incorrect_answers": [
-      "Rome",
-      "Berlin",
-      "Madrid"
-    ]
-  },
-  {
-    "question": "How many continents are there?",
-    "correct_answer": "7",
-    "incorrect_answers": [
-      "5",
-      "8",
-      "6"
-    ]
-  },
-  {
-    "question": "What is the largest planet in our solar system?",
-    "correct_answer": "Jupiter",
-    "incorrect_answers": [
-      "Saturn",
-      "Mars",
-      "Venus"
-    ]
-  },
-  {
-    "question": "Who wrote 'Romeo and Juliet'?",
-    "correct_answer": "Shakespeare",
-    "incorrect_answers": [
-      "Dickens",
-      "Poe",
-      "Hemingway"
-    ]
-  },
-  {
-    "question": "What is the boiling point of water?",
-    "correct_answer": "100°C",
-    "incorrect_answers": [
-      "90°C",
-      "110°C",
-      "80°C"
-    ]
-  },
-  {
-    "question": "What is the currency of Japan?",
-    "correct_answer": "Yen",
-    "incorrect_answers": [
-      "Yuan",
-      "Won",
-      "Rupee"
-    ]
-  },
-  {
-    "question": "Which planet is known as the Red Planet?",
-    "correct_answer": "Mars",
-    "incorrect_answers": [
-      "Mercury",
-      "Jupiter",
-      "Venus"
-    ]
-  },
-  {
-    "question": "Who painted the Mona Lisa?",
-    "correct_answer": "Leonardo da Vinci",
-    "incorrect_answers": [
-      "Michelangelo",
-      "Raphael",
-      "Botticelli"
-    ]
-  },
-  {
-    "question": "What is the chemical symbol for water?",
-    "correct_answer": "H2O",
-    "incorrect_answers": [
-      "CO2",
-      "O2",
-      "NaCl"
-    ]
-  },
-  {
-    "question": "Who discovered gravity?",
-    "correct_answer": "Isaac Newton",
-    "incorrect_answers": [
-      "Albert Einstein",
-      "Galileo Galilei",
-      "Nikola Tesla"
-    ]
-  },
-  {
-    "question": "What is the hardest natural substance?",
-    "correct_answer": "Diamond",
-    "incorrect_answers": [
-      "Gold",
-      "Iron",
-      "Quartz"
-    ]
-  },
-  {
-    "question": "What language is spoken in Brazil?",
-    "correct_answer": "Portuguese",
-    "incorrect_answers": [
-      "Spanish",
-      "French",
-      "German"
-    ]
-  },
-  {
-    "question": "Who is the author of 'Harry Potter'?",
-    "correct_answer": "J.K. Rowling",
-    "incorrect_answers": [
-      "Stephen King",
-      "Tolkien",
-      "George R.R. Martin"
-    ]
-  },
-  {
-    "question": "What gas do plants absorb during photosynthesis?",
-    "correct_answer": "Carbon dioxide",
-    "incorrect_answers": [
-      "Oxygen",
-      "Nitrogen",
-      "Helium"
-    ]
-  },
-  {
-    "question": "What is the largest ocean on Earth?",
-    "correct_answer": "Pacific",
-    "incorrect_answers": [
-      "Atlantic",
-      "Indian",
-      "Arctic"
-    ]
-  },
-  {
-    "question": "Who was the first person to walk on the moon?",
-    "correct_answer": "Neil Armstrong",
-    "incorrect_answers": [
-      "Buzz Aldrin",
-      "Yuri Gagarin",
-      "John Glenn"
-    ]
-  },
-  {
-    "question": "What is the main ingredient in chocolate?",
-    "correct_answer": "Cocoa",
-    "incorrect_answers": [
-      "Milk",
-      "Sugar",
-      "Flour"
-    ]
-  },
-  {
-    "question": "What is the capital of Egypt?",
-    "correct_answer": "Cairo",
-    "incorrect_answers": [
-      "Alexandria",
-      "Giza",
-      "Luxor"
-    ]
-  },
-  {
-    "question": "Which animal is known as the King of the Jungle?",
-    "correct_answer": "Lion",
-    "incorrect_answers": [
-      "Tiger",
-      "Elephant",
-      "Gorilla"
-    ]
-  },
-  {
-    "question": "What is the smallest planet in our solar system?",
-    "correct_answer": "Mercury",
-    "incorrect_answers": [
-      "Venus",
-      "Mars",
-      "Earth"
-    ]
-  }
-]
+/*jshint esversion: 8 */
+/*jshint asi: true */
+
+// Import SweetAlert2 if you are using a module bundler, otherwise include it via a script tag
+
+// Fetch API questions
+async function fetchRandomQuestions(numberOfQuestions, category, difficulty) {
+    const apiUrl = `https://sean5p.github.io/PP2/data/questions.json?amount=${numberOfQuestions}&category=${category}&difficulty=${difficulty}`;
+    try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        return data.map(q => ({
+            question: q.question,
+            correct: q.correct_answer,
+            answers: shuffleArray([...q.incorrect_answers, q.correct_answer])
+        }));
+    } catch (error) {
+        console.error("Error fetching questions:", error);
+        Swal.fire('Error', 'Failed to fetch questions.', 'error');
+        return [];
+    }
+}
+
+// Shuffle Answers
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
+let quizData = []; // Array to Hold Questions
+let currentQuestion = 0;
+let score = 0;
+
+const questionEl = document.getElementById('question');
+const answerEls = document.getElementById('answerList');
+const submitBtn = document.getElementById('submit');
+
+// Load Quiz Question
+function loadQuestion() {
+    deselectAnswers();
+    const currentQuizData = quizData[currentQuestion];
+    questionEl.innerHTML = currentQuizData.question;
+    answerEls.innerHTML = '';
+
+    currentQuizData.answers.forEach(answer => {
+        const answerEl = document.createElement('li');
+        answerEl.innerHTML = `
+            <input type="radio" name="answer" id="${answer}" value="${answer}">
+            <label for="${answer}">${answer}</label>
+        `;
+        answerEls.appendChild(answerEl);
+    });
+}
+
+// Deselect All Answers
+function deselectAnswers() {
+    document.querySelectorAll('input[name="answer"]').forEach(answerEl => {
+        answerEl.checked = false;
+    });
+}
+
+// Get Selected Answer
+function getSelected() {
+    let answer;
+    document.querySelectorAll('input[name="answer"]').forEach(answerEl => {
+        if (answerEl.checked) {
+            answer = answerEl.value;
+        }
+    });
+    return answer;
+}
+
+// Show Answer Feedback
+function showFeedback(isCorrect) {
+    Swal.fire({
+        title: isCorrect ? 'Correct!' : 'Incorrect!',
+        icon: isCorrect ? 'success' : 'error',
+        timer: 3000,
+        showConfirmButton: false
+    });
+}
+
+// Show Results at End of Quiz
+function showResults() {
+    Swal.fire({
+        title: 'Quiz Completed!',
+        html: `You answered correctly at ${score}/${quizData.length} questions.`,
+        confirmButtonText: 'Restart',
+        icon: 'info'
+    }).then(() => {
+        location.reload();
+    });
+}
+
+// Submit Button Event Listener
+submitBtn.addEventListener('click', () => {
+    const answer = getSelected();
+
+    if (answer) {
+        const isCorrect = answer === quizData[currentQuestion].correct;
+        showFeedback(isCorrect);
+        if (isCorrect) {
+            score++;
+        }
+
+        currentQuestion++;
+        if (currentQuestion < quizData.length) {
+            loadQuestion();
+        } else {
+            showResults();
+        }
+    } else {
+        Swal.fire('Oops...', 'Please select an answer', 'warning');
+    }
+});
+
+// Start Quiz
+async function initializeQuiz() {
+    quizData = await fetchRandomQuestions(10, 'general', 'easy'); // Fetch 10 General Questions of Easy Difficulty
+    if (quizData.length > 0) {
+        loadQuestion(); // Load First Question
+    } else {
+        Swal.fire('Error', 'Failed to load quiz questions. Please try again.', 'error');
+    }
+}
+
+initializeQuiz(); // Start Quiz
