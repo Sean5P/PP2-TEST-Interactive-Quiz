@@ -1,21 +1,23 @@
+
 /*jshint esversion: 8 */
 /*jshint asi: true */
 
-// Fetch API Questions from The Trivia API
+// Import SweetAlert2 if you are using a module bundler, otherwise include it via a script tag
+
+// Fetch API questions
 async function fetchRandomQuestions(amount, category, difficulty) {
-// Construct the API URL for The Trivia API
-    const apiUrl = `https://the-trivia-api.com/v2/questions?limit=${amount}&categories=${category}&difficulty=${difficulty}`;
+    const apiUrl = `https://opentdb.com/api.php?amount=${amount}&category=${category}&difficulty=${difficulty}&type=multiple`;
     try {
         const response = await fetch(apiUrl);
         const data = await response.json();
-        console.log(data); // Add this line to inspect the actual data
-        return data.map(q => ({
+        return data.results.map(q => ({
             question: q.question,
             correct: q.correct_answer,
             answers: shuffleArray([...q.incorrect_answers, q.correct_answer])
         }));
     } catch (error) {
         console.error("Error fetching questions:", error);
+        Swal.fire('Error', 'Failed to fetch questions.', 'error');
         return [];
     }
 }
@@ -56,15 +58,15 @@ function loadQuestion() {
 
 // Deselect All Answers
 function deselectAnswers() {
-    document.querySelectorAll('input[name="answer"]').forEach(answerEl => {
+document.querySelectorAll('input[name="answer"]').forEach(answerEl => {
         answerEl.checked = false;
     });
 }
 
-// Get Selected Answer
+// Get Selected Aanswer
 function getSelected() {
     let answer;
-    document.querySelectorAll('input[name="answer"]').forEach(answerEl => {
+document.querySelectorAll('input[name="answer"]').forEach(answerEl => {
         if (answerEl.checked) {
             answer = answerEl.value;
         }
@@ -72,9 +74,9 @@ function getSelected() {
     return answer;
 }
 
-// Show Answer Feedback using SweetAlert2
+// Show Answer Feedback
 function showFeedback(isCorrect) {
-    swal.fire({
+    Swal.fire({
         title: isCorrect ? 'Correct!' : 'Incorrect!',
         icon: isCorrect ? 'success' : 'error',
         timer: 3000,
@@ -82,15 +84,17 @@ function showFeedback(isCorrect) {
     });
 }
 
-// Show End of Quiz Results using SweetAlert2
+
+
+// Show Results at End of Quiz
 function showResults() {
-    swal.fire({
-        title: `Quiz Completed!`,
-        html: `You answered correctly at <b>${score}/${quizData.length}</b> questions.`,
+    Swal.fire({
+        title: 'Quiz Completed!',
+        html: `You answered correctly at ${score}/${quizData.length} questions.`,
         confirmButtonText: 'Restart',
-        preConfirm: () => {
-            location.reload();
-        }
+        icon: 'info'
+    }).then(() => {
+        location.reload();
     });
 }
 
@@ -112,28 +116,17 @@ submitBtn.addEventListener('click', () => {
             showResults();
         }
     } else {
-        swal.fire({
-            title: 'Oops...',
-            text: 'Please select an answer!',
-            icon: 'warning',
-            confirmButtonText: 'Okay'
-        });
+        Swal.fire('Oops...', 'Please select an answer', 'warning');
     }
 });
 
 // Start Quiz
 async function initializeQuiz() {
-// Adjust Parameters According to The Trivia API's Categories Difficulties etc
-    quizData = await fetchRandomQuestions(10, 'general_knowledge', 'easy');
+    quizData = await fetchRandomQuestions(10, 9, 'easy'); // Fetch 10 Questions
     if (quizData.length > 0) {
         loadQuestion(); // Load First Question
     } else {
-        swal.fire({
-            title: 'Error!',
-            text: 'Failed to load quiz questions. Please try again.',
-            icon: 'error',
-            confirmButtonText: 'Okay'
-        });
+        Swal.fire('Error', 'Failed to load quiz questions. Please try again.', 'error');
     }
 }
 
