@@ -59,7 +59,7 @@ function deselectAnswers() {
     });
 }
 
-// Get Selected Aanswer
+// Get Selected Answer
 function getSelected() {
     let answer;
     document.querySelectorAll('input[name="answer"]').forEach(answerEl => {
@@ -70,22 +70,26 @@ function getSelected() {
     return answer;
 }
 
-// Show Answer Feedback
+// Show Answer Feedback using SweetAlert2
 function showFeedback(isCorrect) {
-    const feedbackEl = document.createElement('div');
-    feedbackEl.textContent = isCorrect ? 'Correct!' : 'Incorrect!';
-    feedbackEl.className = isCorrect ? 'feedback-correct' : 'feedback-incorrect';
-    document.body.appendChild(feedbackEl);
-    setTimeout(() => feedbackEl.remove(), 3000); // Remove Feedback after 3 seconds
+    swal.fire({
+        title: isCorrect ? 'Correct!' : 'Incorrect!',
+        icon: isCorrect ? 'success' : 'error',
+        timer: 3000,
+        showConfirmButton: false
+    });
 }
 
-// Show Results at End of Quiz
+// Show Results at End of Quiz using SweetAlert2
 function showResults() {
-    const quizContainer = document.getElementById('quiz-container');
-    quizContainer.innerHTML = `
-        <h2>You answered correctly at ${score}/${quizData.length} questions.</h2>
-        <button onclick="location.reload()">Reload</button>
-    `;
+    swal.fire({
+        title: `Quiz Completed!`,
+        html: `You answered correctly at <b>${score}/${quizData.length}</b> questions.`,
+        confirmButtonText: 'Restart',
+        preConfirm: () => {
+            location.reload();
+        }
+    });
 }
 
 // Submit Button Event Listener
@@ -106,7 +110,12 @@ submitBtn.addEventListener('click', () => {
             showResults();
         }
     } else {
-        alert("Please select an answer");
+        swal.fire({
+            title: 'Oops...',
+            text: 'Please select an answer!',
+            icon: 'warning',
+            confirmButtonText: 'Okay'
+        });
     }
 });
 
@@ -116,7 +125,12 @@ async function initializeQuiz() {
     if (quizData.length > 0) {
         loadQuestion(); // Load First Question
     } else {
-        alert("Failed to load quiz questions. Please try again.");
+        swal.fire({
+            title: 'Error!',
+            text: 'Failed to load quiz questions. Please try again.',
+            icon: 'error',
+            confirmButtonText: 'Okay'
+        });
     }
 }
 
