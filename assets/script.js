@@ -6,7 +6,7 @@
 
 // Fetch API Questions from The Trivia API
 async function fetchRandomQuestions(amount, category, difficulty) {
-    // Construct the API URL for The Trivia API
+// Construct the API URL for The Trivia API
     const apiUrl = `https://the-trivia-api.com/v2/questions?limit=${amount}&categories=${category}&difficulty=${difficulty}`;
     try {
         const response = await fetch(apiUrl);
@@ -84,7 +84,7 @@ function showFeedback(isCorrect) {
     });
 }
 
-// Show Results at End of Quiz using SweetAlert2
+// Show End of Quiz Results using SweetAlert2
 function showResults() {
     swal.fire({
         title: `Quiz Completed!`,
@@ -125,7 +125,8 @@ submitBtn.addEventListener('click', () => {
 
 // Start Quiz
 async function initializeQuiz() {
-    quizData = await fetchRandomQuestions(10, 9, 'easy'); // Fetch 10 Questions
+// Adjust Parameters According to The Trivia API's Categories Difficulties etc
+    quizData = await fetchRandomQuestions(10, 'general_knowledge', 'easy');
     if (quizData.length > 0) {
         loadQuestion(); // Load First Question
     } else {
