@@ -1,9 +1,6 @@
 /*jshint esversion: 8 */
 /*jshint asi: true */
 
-
-
-
 // Fetch API Questions from The Trivia API
 async function fetchRandomQuestions(amount, category, difficulty) {
 // Construct the API URL for The Trivia API
@@ -11,7 +8,8 @@ async function fetchRandomQuestions(amount, category, difficulty) {
     try {
         const response = await fetch(apiUrl);
         const data = await response.json();
-        return data.results.map(q => ({
+        console.log(data); // Add this line to inspect the actual data
+        return data.map(q => ({
             question: q.question,
             correct: q.correct_answer,
             answers: shuffleArray([...q.incorrect_answers, q.correct_answer])
