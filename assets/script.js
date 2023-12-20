@@ -5,11 +5,13 @@
 
 // Fetch API questions
 async function fetchRandomQuestions(amount, category, difficulty) {
-    const apiUrl = `https://opentdb.com/api.php?amount=${amount}&category=${category}&difficulty=${difficulty}&type=multiple`;
+   // const apiUrl = `https://opentdb.com/api.php?amount=${amount}&category=${category}&difficulty=${difficulty}&type=multiple`;
+    
+      const apiUrl = 'https://sean5p.github.io/data/questions.json';
     try {
         const response = await fetch(apiUrl);
         const data = await response.json();
-        return data.results.map(q => ({
+        return data.map(q => ({
             question: q.question,
             correct: q.correct_answer,
             answers: shuffleArray([...q.incorrect_answers, q.correct_answer])
