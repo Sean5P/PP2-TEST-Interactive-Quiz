@@ -6,7 +6,7 @@
  {"question":"Who wrote 'Romeo and Juliet'?","correct_answer":"Shakespeare","incorrect_answers":["Dickens","Poe","Hemingway"]},
  {"question":"What is the boiling point of water?","correct_answer": "100°C","incorrect_answers":["90°C","110°C","80°C"]},
  {"question":"What is the currency of Japan?","correct_answer":"Yen","incorrect_answers":["Yuan","Won","Rupee"]},
- {"question":"Which planet is known as the Red Planet?","correct_answer":"Mars","incorrect_answers":["Mercury","Jupiter","Venus"]}.
+ {"question":"Which planet is known as the Red Planet?","correct_answer":"Mars","incorrect_answers":["Mercury","Jupiter","Venus"]},
  {"question":"Who painted the Mona Lisa?","correct_answer":"Leonardo da Vinci","incorrect_answers":["Michelangelo","Raphael","Botticelli"]},
  {"question":"What is the chemical symbol for water?","correct_answer":"H2O","incorrect_answers":["CO2","O2","NaCl"]},
  {"question":"Who discovered gravity?","correct_answer":"Isaac Newton","incorrect_answers":["Albert Einstein","Galileo Galilei","Nikola Tesla"]},
