@@ -1,9 +1,13 @@
 /*jshint esversion: 8 */
 /*jshint asi: true */
 
-// Fetch API questions
+
+
+
+// Fetch API Questions from The Trivia API
 async function fetchRandomQuestions(amount, category, difficulty) {
-    const apiUrl = `https://opentdb.com/api.php?amount=${amount}&category=${category}&difficulty=${difficulty}&type=multiple`;
+    // Construct the API URL for The Trivia API
+    const apiUrl = `https://the-trivia-api.com/v2/questions?limit=${amount}&categories=${category}&difficulty=${difficulty}`;
     try {
         const response = await fetch(apiUrl);
         const data = await response.json();
