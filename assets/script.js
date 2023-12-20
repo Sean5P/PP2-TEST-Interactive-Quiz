@@ -4,6 +4,7 @@
 // Import SweetAlert2
 
 // Fetch API questions
+
 async function fetchRandomQuestions(amount, category, difficulty) {
     const apiUrl = `https://opentdb.com/api.php?amount=${amount}&category=${category}&difficulty=${difficulty}&type=multiple`;
     console.log("Fetching questions from API:", apiUrl); // Log the API URL
