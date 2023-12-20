@@ -1,3 +1,6 @@
+/*jshint esversion: 8 */
+/*jshint asi: true */
+
 // Import SweetAlert2
 
 // Fetch API questions
