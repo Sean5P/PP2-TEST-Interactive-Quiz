@@ -4,7 +4,7 @@
 // Import SweetAlert2 if you are using a module bundler, otherwise include it via a script tag
 
 // Fetch API questions
-async function fetchRandomQuestions(amount, category, difficulty) {
+async function fetchRandomQuestions {
   const apiUrl = 'https://sean5p.github.io/PP2/data/questions.json';
     try {
         const response = await fetch(apiUrl);
