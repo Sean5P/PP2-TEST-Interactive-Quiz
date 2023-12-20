@@ -7,7 +7,7 @@
 async function fetchRandomQuestions(amount, category, difficulty) {
    // const apiUrl = `https://opentdb.com/api.php?amount=${amount}&category=${category}&difficulty=${difficulty}&type=multiple`;
     
-      const apiUrl = 'https://sean5p.github.io/data/questions.json';
+      const apiUrl = 'https://sean5p.github.io/PP2/data/questions.json';
     try {
         const response = await fetch(apiUrl);
         const data = await response.json();
