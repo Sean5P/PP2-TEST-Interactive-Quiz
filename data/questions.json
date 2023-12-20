@@ -1,1 +1,22 @@
-[{"question":"Who is the president?","correct_answer":"Biden","incorrect_answers":["Obama","Varadkar","Johnson"]},{"question":"What year is it?","correct_answer":"2023","incorrect_answers":["2013","1999","2030"]},{"question":"Who is the president?","correct_answer":"Biden","incorrect_answers":["Obama","Varadkar","Johnson"]}]
+[{"question":"Who is the president?","correct_answer":"Biden","incorrect_answers":["Obama","Varadkar","Johnson"]},
+ {"question":"What year is it?","correct_answer":"2023","incorrect_answers":["2013","1999","2030"]},
+ {"question":"What is the capital of France?","correct_answer":"Paris","incorrect_answers":["Rome","Berlin","Madrid"]},
+ {"question":"How many continents are there?","correct_answer":"7","incorrect_answers":["5","8","6"]},
+ {"question":"What is the largest planet in our solar system?","correct_answer":"Jupiter","incorrect_answers":["Saturn","Mars","Venus"]},
+ {"question":"Who wrote 'Romeo and Juliet'?","correct_answer":"Shakespeare","incorrect_answers":["Dickens","Poe","Hemingway"]},
+ {"question":"What is the boiling point of water?","correct_answer": "100°C","incorrect_answers":["90°C","110°C","80°C"]},
+ {"question":"What is the currency of Japan?","correct_answer":"Yen","incorrect_answers":["Yuan","Won","Rupee"]},
+ {"question":"Which planet is known as the Red Planet?","correct_answer":"Mars","incorrect_answers":["Mercury","Jupiter","Venus"]}.
+ {"question":"Who painted the Mona Lisa?","correct_answer":"Leonardo da Vinci","incorrect_answers":["Michelangelo","Raphael","Botticelli"]},
+ {"question":"What is the chemical symbol for water?","correct_answer":"H2O","incorrect_answers":["CO2","O2","NaCl"]},
+ {"question":"Who discovered gravity?","correct_answer":"Isaac Newton","incorrect_answers":["Albert Einstein","Galileo Galilei","Nikola Tesla"]},
+ {"question":"What is the hardest natural substance?","correct_answer":"Diamond","incorrect_answers":["Gold","Iron","Quartz"]},
+ {"question":"What language is spoken in Brazil?","correct_answer":"Portuguese","incorrect_answers":["Spanish","French","German"]},
+ {"question":"Who is the author of 'Harry Potter'?","correct_answer":"J.K. Rowling","incorrect_answers":["Stephen King","Tolkien","George R.R. Martin"]},
+ {"question":"What gas do plants absorb during photosynthesis?","correct_answer":"Carbon dioxide","incorrect_answers":["Oxygen","Nitrogen","Helium"]},
+ {"question":"What is the largest ocean on Earth?","correct_answer":"Pacific","incorrect_answers":["Atlantic","Indian","Arctic"]},
+ {"question":"Who was the first person to walk on the moon?","correct_answer":"Neil Armstrong","incorrect_answers":["Buzz Aldrin","Yuri Gagarin","John Glenn"]},
+ {"question":"What is the main ingredient in chocolate?","correct_answer":"Cocoa","incorrect_answers":["Milk","Sugar","Flour"]},
+ {"question":"What is the capital of Egypt?","correct_answer":"Cairo","incorrect_answers":["Alexandria","Giza","Luxor"]},
+ {"question":"Which animal is known as the King of the Jungle?","correct_answer":"Lion","incorrect_answers":["Tiger","Elephant","Gorilla"]},
+ {"question":"What is the smallest planet in our solar system?","correct_answer":"Mercury","incorrect_answers":["Venus","Mars","Earth"]}]
