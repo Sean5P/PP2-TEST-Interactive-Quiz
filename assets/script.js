@@ -1,11 +1,9 @@
 /*jshint esversion: 8 */
 /*jshint asi: true */
 
-// Import SweetAlert2 if you are using a module bundler, otherwise include it via a script tag
-
 // Fetch API questions
-async function fetchRandomQuestions {
-  const apiUrl = 'https://sean5p.github.io/PP2/data/questions.json';
+async function fetchRandomQuestions(numberOfQuestions, category, difficulty) {
+    const apiUrl = `https://sean5p.github.io/PP2/data/questions.json?amount=${numberOfQuestions}&category=${category}&difficulty=${difficulty}`;
     try {
         const response = await fetch(apiUrl);
         const data = await response.json();
@@ -16,7 +14,10 @@ async function fetchRandomQuestions {
         }));
     } catch (error) {
         console.error("Error fetching questions:", error);
-        Swal.fire('Error', 'Failed to fetch questions.', 'error');
+        // Check if Swal is defined before using it
+        if (typeof Swal !== 'undefined') {
+            Swal.fire('Error', 'Failed to fetch questions.', 'error');
+        }
         return [];
     }
 }
@@ -57,15 +58,15 @@ function loadQuestion() {
 
 // Deselect All Answers
 function deselectAnswers() {
-document.querySelectorAll('input[name="answer"]').forEach(answerEl => {
+    document.querySelectorAll('input[name="answer"]').forEach(answerEl => {
         answerEl.checked = false;
     });
 }
 
-// Get Selected Aanswer
+// Get Selected Answer
 function getSelected() {
     let answer;
-document.querySelectorAll('input[name="answer"]').forEach(answerEl => {
+    document.querySelectorAll('input[name="answer"]').forEach(answerEl => {
         if (answerEl.checked) {
             answer = answerEl.value;
         }
@@ -75,23 +76,28 @@ document.querySelectorAll('input[name="answer"]').forEach(answerEl => {
 
 // Show Answer Feedback
 function showFeedback(isCorrect) {
-    Swal.fire({
-        title: isCorrect ? 'Correct!' : 'Incorrect!',
-        icon: isCorrect ? 'success' : 'error',
-        timer: 3000,
-        showConfirmButton: false
-    });
+    if (typeof Swal !== 'undefined') {
+        Swal.fire({
+            title: isCorrect ? 'Correct!' : 'Incorrect!',
+            icon: isCorrect ? 'success' : 'error',
+            timer: 3000,
+            showConfirmButton: false
+        });
+    }
 }
+
 // Show Results at End of Quiz
 function showResults() {
-    Swal.fire({
-        title: 'Quiz Completed!',
-        html: `You answered correctly at ${score}/${quizData.length} questions.`,
-        confirmButtonText: 'Restart',
-        icon: 'info'
-    }).then(() => {
-        location.reload();
-    });
+    if (typeof Swal !== 'undefined') {
+        Swal.fire({
+            title: 'Quiz Completed!',
+            html: `You answered correctly at ${score}/${quizData.length} questions.`,
+            confirmButtonText: 'Restart',
+            icon: 'info'
+        }).then(() => {
+            location.reload();
+        });
+    }
 }
 
 // Submit Button Event Listener
@@ -112,18 +118,27 @@ submitBtn.addEventListener('click', () => {
             showResults();
         }
     } else {
-        Swal.fire('Oops...', 'Please select an answer', 'warning');
+        if (typeof Swal !== 'undefined') {
+            Swal.fire('Oops...', 'Please select an answer', 'warning');
+        }
     }
 });
 
 // Start Quiz
 async function initializeQuiz() {
-    quizData = await fetchRandomQuestions; // (10, 9, 'easy') Fetch 10 Questions
+    quizData = await fetchRandomQuestions(10, 'general', 'easy'); // Fetch 10 General Questions of Easy Difficulty
     if (quizData.length > 0) {
         loadQuestion(); // Load First Question
     } else {
-        Swal.fire('Error', 'Failed to load quiz questions. Please try again.', 'error');
+        if (typeof Swal !== 'undefined') {
+            Swal.fire('Error', 'Failed to load quiz questions. Please try again.', 'error');
+        }
     }
 }
 
-initializeQuiz(); // Start Quiz
+// Ensure SweetAlert2 is loaded before starting the quiz
+if (typeof Swal !== 'undefined') {
+    initializeQuiz(); // Start Quiz
+} else {
+    console.error('SweetAlert2 is not defined. Ensure it is correctly loaded.');
+}
