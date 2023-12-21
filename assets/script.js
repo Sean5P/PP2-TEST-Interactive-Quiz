@@ -138,8 +138,6 @@ async function initializeQuiz() {
     quizData = await fetchRandomQuestions(10); // Pick Only 10 Random Questions
     if (quizData.length > 0) {
         loadQuestion(); // Load First Question
-    if (quizData.length > 0) {
-        loadQuestion(); // Load First Question
     } else {
         if (typeof Swal !== 'undefined') {
             Swal.fire('Error', 'Failed to load quiz questions. Please try again.', 'error');
