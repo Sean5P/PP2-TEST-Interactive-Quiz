@@ -57,6 +57,13 @@ button {
     margin-top: 20px;
 }
 
+#questionCounter {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
 /* Feedback Styles */
 .feedback-correct {
     color: green;
