@@ -3,10 +3,12 @@
 
 // Fetch API questions
 async function fetchRandomQuestions(numberOfQuestions, category, difficulty) {
-    const apiUrl = `https://sean5p.github.io/PP2/data/questions.json?amount=${numberOfQuestions}&category=${category}&difficulty=${difficulty}`;
+    const apiUrl = 'https://sean5p.github.io/PP2/data/questions.json';
     try {
         const response = await fetch(apiUrl);
-        const data = await response.json();
+        let data = await response.json();
+        // Randomly pick 10 questions if more are available
+        data = data.sort(() => 0.5 - Math.random()).slice(0, numberOfQuestions);
         return data.map(q => ({
             question: q.question,
             correct: q.correct_answer,
@@ -14,7 +16,6 @@ async function fetchRandomQuestions(numberOfQuestions, category, difficulty) {
         }));
     } catch (error) {
         console.error("Error fetching questions:", error);
-        // Check if Swal is defined before using it
         if (typeof Swal !== 'undefined') {
             Swal.fire('Error', 'Failed to fetch questions.', 'error');
         }
@@ -37,6 +38,7 @@ let score = 0;
 
 const questionEl = document.getElementById('question');
 const answerEls = document.getElementById('answerList');
+const questionCounterEl = document.getElementById('questionCounter'); // Element to display current question number
 const submitBtn = document.getElementById('submit');
 
 // Load Quiz Question
@@ -45,6 +47,10 @@ function loadQuestion() {
     const currentQuizData = quizData[currentQuestion];
     questionEl.innerHTML = currentQuizData.question;
     answerEls.innerHTML = '';
+    // Update question counter
+    if (questionCounterEl) {
+        questionCounterEl.textContent = `Question ${currentQuestion + 1} of ${quizData.length}`;
+    }
 
     currentQuizData.answers.forEach(answer => {
         const answerEl = document.createElement('li');
@@ -131,14 +137,9 @@ async function initializeQuiz() {
         loadQuestion(); // Load First Question
     } else {
         if (typeof Swal !== 'undefined') {
-            Swal.fire('Error', 'Failed to load quiz questions. Please try again.', 'error');
-        }
-    }
-}
+            Swal.fire('Error', 'Failed to load quiz questions. Please
 
-// Ensure SweetAlert2 is loaded before starting the quiz
-if (typeof Swal !== 'undefined') {
-    initializeQuiz(); // Start Quiz
-} else {
-    console.error('SweetAlert2 is not defined. Ensure it is correctly loaded.');
-}
+
+
+
+
