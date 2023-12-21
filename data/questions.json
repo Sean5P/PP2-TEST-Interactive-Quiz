@@ -1,155 +1,227 @@
 [
   {
-    "question": "Who is the president of USA?",
-    "correct_answer": "Biden",
+    "question": "What is the smallest planet in our solar system?",
+    "correct_answer": "Mercury",
     "incorrect_answers": [
-      "Obama",
-      "Varadkar",
-      "Johnson"
+      "Mars",
+      "Venus",
+      "Earth"
     ]
   },
   {
-    "question": "What century is it?",
-    "correct_answer": "21st",
+    "question": "Which element is represented by the symbol 'O' in the periodic table?",
+    "correct_answer": "Oxygen",
     "incorrect_answers": [
-      "22nd",
-      "23rd",
-      "24th"
+      "Gold",
+      "Silver",
+      "Iron"
     ]
   },
   {
-    "question": "What is the capital of France?",
-    "correct_answer": "Paris",
+    "question": "What is the largest mammal in the world?",
+    "correct_answer": "Blue whale",
     "incorrect_answers": [
-      "Rome",
-      "Berlin",
-      "Madrid"
+      "Elephant",
+      "Giraffe",
+      "Hippopotamus"
     ]
   },
   {
-    "question": "How many continents are there?",
-    "correct_answer": "7",
+    "question": "Which country is known as the Land of the Rising Sun?",
+    "correct_answer": "Japan",
     "incorrect_answers": [
-      "5",
-      "8",
-      "6"
+      "China",
+      "South Korea",
+      "Thailand"
     ]
   },
   {
-    "question": "What is the largest planet in our solar system?",
+    "question": "What is the main ingredient in guacamole?",
+    "correct_answer": "Avocado",
+    "incorrect_answers": [
+      "Tomato",
+      "Potato",
+      "Cucumber"
+    ]
+  },
+  {
+    "question": "Which gas is most abundant in the Earth's atmosphere?",
+    "correct_answer": "Nitrogen",
+    "incorrect_answers": [
+      "Oxygen",
+      "Carbon Dioxide",
+      "Hydrogen"
+    ]
+  },
+  {
+    "question": "What is the hardest natural substance on Earth?",
+    "correct_answer": "Diamond",
+    "incorrect_answers": [
+      "Quartz",
+      "Ruby",
+      "Sapphire"
+    ]
+  },
+  {
+    "question": "Which planet in our solar system has the most moons?",
     "correct_answer": "Jupiter",
     "incorrect_answers": [
       "Saturn",
-      "Mars",
-      "Venus"
+      "Uranus",
+      "Neptune"
     ]
   },
   {
-    "question": "Who wrote 'Romeo and Juliet'?",
-    "correct_answer": "Shakespeare",
+    "question": "Who invented the telephone?",
+    "correct_answer": "Alexander Graham Bell",
     "incorrect_answers": [
-      "Dickens",
-      "Poe",
-      "Hemingway"
+      "Thomas Edison",
+      "Nikola Tesla",
+      "Marie Curie"
     ]
   },
   {
-    "question": "What is the boiling point of water?",
-    "correct_answer": "100°C",
+    "question": "What is the chemical symbol for gold?",
+    "correct_answer": "Au",
     "incorrect_answers": [
-      "90°C",
-      "110°C",
-      "80°C"
+      "Ag",
+      "Fe",
+      "Cu"
     ]
   },
   {
-    "question": "What is the currency of Japan?",
-    "correct_answer": "Yen",
+    "question": "What is the capital of Canada?",
+    "correct_answer": "Ottawa",
     "incorrect_answers": [
-      "Yuan",
-      "Won",
-      "Rupee"
+      "Toronto",
+      "Montreal",
+      "Vancouver"
     ]
   },
   {
-    "question": "Which planet is known as the Red Planet?",
-    "correct_answer": "Mars",
+    "question": "Who is known as the 'Father of History'?",
+    "correct_answer": "Herodotus",
     "incorrect_answers": [
-      "Mercury",
-      "Jupiter",
-      "Venus"
+      "Socrates",
+      "Aristotle",
+      "Plato"
     ]
   },
   {
-    "question": "Who painted the Mona Lisa?",
-    "correct_answer": "Leonardo da Vinci",
+    "question": "What is the largest rainforest in the world?",
+    "correct_answer": "Amazon Rainforest",
     "incorrect_answers": [
-      "Michelangelo",
-      "Raphael",
-      "Botticelli"
+      "Congo Rainforest",
+      "Daintree Rainforest",
+      "Sundarbans"
     ]
   },
   {
-    "question": "What is the chemical symbol for water?",
-    "correct_answer": "H2O",
+    "question": "Who was the first female Prime Minister of the United Kingdom?",
+    "correct_answer": "Margaret Thatcher",
     "incorrect_answers": [
-      "CO2",
-      "O2",
-      "NaCl"
+      "Theresa May",
+      "Angela Merkel",
+      "Indira Gandhi"
     ]
   },
   {
-    "question": "Who discovered gravity?",
-    "correct_answer": "Isaac Newton",
+    "question": "What is the pH value of pure water?",
+    "correct_answer": "7",
     "incorrect_answers": [
-      "Albert Einstein",
-      "Galileo Galilei",
-      "Nikola Tesla"
+      "5",
+      "9",
+      "11"
     ]
   },
   {
-    "question": "What is the hardest natural substance?",
-    "correct_answer": "Diamond",
+    "question": "Which country is known for inventing the sport of cricket?",
+    "correct_answer": "England",
     "incorrect_answers": [
-      "Gold",
-      "Iron",
-      "Quartz"
+      "Australia",
+      "India",
+      "South Africa"
     ]
   },
   {
-    "question": "What language is spoken in Brazil?",
-    "correct_answer": "Portuguese",
+    "question": "What is the capital city of Japan?",
+    "correct_answer": "Tokyo",
     "incorrect_answers": [
-      "Spanish",
-      "French",
-      "German"
+      "Osaka",
+      "Kyoto",
+      "Hiroshima"
     ]
   },
   {
-    "question": "Who is the author of 'Harry Potter'?",
-    "correct_answer": "J.K. Rowling",
+    "question": "In which year did World War I begin?",
+    "correct_answer": "1914",
     "incorrect_answers": [
-      "Stephen King",
-      "Tolkien",
-      "George R.R. Martin"
+      "1912",
+      "1916",
+      "1918"
     ]
   },
   {
-    "question": "What gas do plants absorb during photosynthesis?",
-    "correct_answer": "Carbon dioxide",
+    "question": "Who discovered penicillin?",
+    "correct_answer": "Alexander Fleming",
     "incorrect_answers": [
-      "Oxygen",
-      "Nitrogen",
-      "Helium"
+      "Marie Curie",
+      "Louis Pasteur",
+      "Thomas Edison"
     ]
   },
   {
-    "question": "What is the largest ocean on Earth?",
-    "correct_answer": "Pacific",
+    "question": "Which is the longest river in the United States?",
+    "correct_answer": "Mississippi River",
     "incorrect_answers": [
-      "Atlantic",
-      "Indian",
-      "Arctic"
+      "Missouri River",
+      "Colorado River",
+      "Rio Grande"
+    ]
+  },
+  {
+    "question": "What is the name of the world's largest coral reef system?",
+    "correct_answer": "Great Barrier Reef",
+    "incorrect_answers": [
+      "Red Sea Coral Reef",
+      "New Caledonia Barrier Reef",
+      "Mesoamerican Barrier Reef"
+    ]
+  },
+  {
+    "question": "Who is the author of 'Pride and Prejudice'?",
+    "correct_answer": "Jane Austen",
+    "incorrect_answers": [
+      "Charlotte Brontë",
+      "Emily Brontë",
+      "Charles Dickens"
+    ]
+  },
+  {
+    "question": "What is the capital of Spain?",
+    "correct_answer": "Madrid",
+    "incorrect_answers": [
+      "Barcelona",
+      "Seville",
+      "Valencia"
+    ]
+  },
+  {
+    "question": "Which planet is closest to the sun?",
+    "correct_answer": "Mercury",
+    "incorrect_answers": [
+      "Venus",
+      "Earth",
+      "Mars"
+    ]
+  },
+  {
+    "question": "What is the name of the largest ocean on Earth?",
+    "correct_answer": "Pacific Ocean",
+    "incorrect_answers": [
+      "Atlantic Ocean",
+      "Indian Ocean",
+      "Arctic Ocean"
     ]
   },
   {
@@ -171,12 +243,21 @@
     ]
   },
   {
-    "question": "What is the capital of Egypt?",
-    "correct_answer": "Cairo",
+    "question": "Who wrote 'The Odyssey'?",
+    "correct_answer": "Homer",
     "incorrect_answers": [
-      "Alexandria",
-      "Giza",
-      "Luxor"
+      "Virgil",
+      "Sophocles",
+      "Aristophanes"
+    ]
+  },
+  {
+    "question": "What is the largest continent by land area?",
+    "correct_answer": "Asia",
+    "incorrect_answers": [
+      "Africa",
+      "North America",
+      "Europe"
     ]
   },
   {
@@ -186,15 +267,6 @@
       "Tiger",
       "Elephant",
       "Gorilla"
-    ]
-  },
-  {
-    "question": "What is the smallest planet in our solar system?",
-    "correct_answer": "Mercury",
-    "incorrect_answers": [
-      "Venus",
-      "Mars",
-      "Earth"
     ]
   }
 ]
