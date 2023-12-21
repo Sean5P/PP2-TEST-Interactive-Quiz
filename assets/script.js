@@ -101,7 +101,7 @@ function showResults() {
     if (typeof Swal !== 'undefined') {
         Swal.fire({
             title: 'Quiz Completed!',
-            html: `You answered correctly at ${score}/${quizData.length} questions.`,
+            html: `You answered ${score}/${quizData.length} questions correctly.`,
             confirmButtonText: 'Restart',
             icon: 'info'
         }).then(() => {
