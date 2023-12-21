@@ -90,7 +90,7 @@ function showFeedback(isCorrect) {
         Swal.fire({
             title: isCorrect ? 'Correct!' : 'Incorrect!',
             icon: isCorrect ? 'success' : 'error',
-            timer: 3000,
+            timer: 2500,
             showConfirmButton: false
         });
     }
@@ -150,4 +150,3 @@ async function initializeQuiz() {
         }
     }
 }
-
