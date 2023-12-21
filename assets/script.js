@@ -1,13 +1,14 @@
+/* global Swal */
 /*jshint esversion: 8 */
 /*jshint asi: true */
 
 // Fetch API questions
 async function fetchRandomQuestions(numberOfQuestions) {
     const apiUrl = 'https://sean5p.github.io/PP2/data/questions.json';
-try {
+    try {
         const response = await fetch(apiUrl);
         let data = await response.json();
-// Pick 10 Random Questions
+        // Pick 10 Random Questions
         if (data.length > numberOfQuestions) {
             data = data.sort(() => 0.5 - Math.random()).slice(0, numberOfQuestions);
         }
@@ -18,8 +19,8 @@ try {
         }));
     } catch (error) {
         console.error("Error fetching questions:", error);
-// Check Swal Defined before Use       
-if (typeof Swal !== 'undefined') {
+        // Check Swal Defined before Use       
+        if (typeof Swal !== 'undefined') {
             Swal.fire('Error', 'Failed to fetch questions.', 'error');
         }
         return [];
@@ -41,7 +42,7 @@ let score = 0;
 
 const questionEl = document.getElementById('question');
 const answerEls = document.getElementById('answerList');
-const questionCounterEl = document.getElementById('questionCounter'); // Display Current Question Nmber Element
+const questionCounterEl = document.getElementById('questionCounter'); // Display Current Question Number Element
 const submitBtn = document.getElementById('submit');
 
 // Load Quiz Question
@@ -50,7 +51,7 @@ function loadQuestion() {
     const currentQuizData = quizData[currentQuestion];
     questionEl.innerHTML = currentQuizData.question;
     answerEls.innerHTML = '';
-// Update Question Counter
+    // Update Question Counter
     if (questionCounterEl) {
         questionCounterEl.textContent = `Question ${currentQuestion + 1} of ${quizData.length}`;
     }
@@ -133,7 +134,12 @@ submitBtn.addEventListener('click', () => {
     }
 });
 
-// Start Quiz
+// Start Quiz when DOM Fully Loaded
+document.addEventListener('DOMContentLoaded', () => {
+    initializeQuiz();
+});
+
+// Initialize Quiz Function
 async function initializeQuiz() {
     quizData = await fetchRandomQuestions(10); // Pick Only 10 Random Questions
     if (quizData.length > 0) {
@@ -144,3 +150,4 @@ async function initializeQuiz() {
         }
     }
 }
+
