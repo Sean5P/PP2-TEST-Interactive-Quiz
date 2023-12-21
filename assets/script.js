@@ -2,13 +2,15 @@
 /*jshint asi: true */
 
 // Fetch API questions
-async function fetchRandomQuestions(numberOfQuestions, category, difficulty) {
+async function fetchRandomQuestions(numberOfQuestions) {
     const apiUrl = 'https://sean5p.github.io/PP2/data/questions.json';
-    try {
+try {
         const response = await fetch(apiUrl);
         let data = await response.json();
-        // Randomly pick 10 questions if more are available
-        data = data.sort(() => 0.5 - Math.random()).slice(0, numberOfQuestions);
+// Pick 10 Random Questions
+        if (data.length > numberOfQuestions) {
+            data = data.sort(() => 0.5 - Math.random()).slice(0, numberOfQuestions);
+        }
         return data.map(q => ({
             question: q.question,
             correct: q.correct_answer,
@@ -16,7 +18,8 @@ async function fetchRandomQuestions(numberOfQuestions, category, difficulty) {
         }));
     } catch (error) {
         console.error("Error fetching questions:", error);
-        if (typeof Swal !== 'undefined') {
+// Check Swal Defined before Use       
+if (typeof Swal !== 'undefined') {
             Swal.fire('Error', 'Failed to fetch questions.', 'error');
         }
         return [];
@@ -38,7 +41,7 @@ let score = 0;
 
 const questionEl = document.getElementById('question');
 const answerEls = document.getElementById('answerList');
-const questionCounterEl = document.getElementById('questionCounter'); // Element to display current question number
+const questionCounterEl = document.getElementById('questionCounter'); // Display Current Question Nmber Element
 const submitBtn = document.getElementById('submit');
 
 // Load Quiz Question
@@ -47,7 +50,7 @@ function loadQuestion() {
     const currentQuizData = quizData[currentQuestion];
     questionEl.innerHTML = currentQuizData.question;
     answerEls.innerHTML = '';
-    // Update question counter
+// Update Question Counter
     if (questionCounterEl) {
         questionCounterEl.textContent = `Question ${currentQuestion + 1} of ${quizData.length}`;
     }
@@ -92,7 +95,7 @@ function showFeedback(isCorrect) {
     }
 }
 
-// Show Results at End of Quiz
+// Show End of Quiz Result
 function showResults() {
     if (typeof Swal !== 'undefined') {
         Swal.fire({
@@ -132,14 +135,14 @@ submitBtn.addEventListener('click', () => {
 
 // Start Quiz
 async function initializeQuiz() {
-    quizData = await fetchRandomQuestions(10, 'general', 'easy'); // Fetch 10 General Questions of Easy Difficulty
+    quizData = await fetchRandomQuestions(10); // Pick Only 10 Random Questions
+    if (quizData.length > 0) {
+        loadQuestion(); // Load First Question
     if (quizData.length > 0) {
         loadQuestion(); // Load First Question
     } else {
         if (typeof Swal !== 'undefined') {
-            Swal.fire('Error', 'Failed to load quiz questions. Please
-
-
-
-
-
+            Swal.fire('Error', 'Failed to load quiz questions. Please try again.', 'error');
+        }
+    }
+}
