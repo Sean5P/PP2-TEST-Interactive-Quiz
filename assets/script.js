@@ -90,7 +90,7 @@ function showFeedback(isCorrect) {
         Swal.fire({
             title: isCorrect ? 'Correct!' : 'Incorrect!',
             icon: isCorrect ? 'success' : 'error',
-            timer: 2500,
+            timer: 2250,
             showConfirmButton: false
         });
     }
@@ -101,7 +101,7 @@ function showResults() {
     if (typeof Swal !== 'undefined') {
         Swal.fire({
             title: 'Quiz Completed!',
-            html: `You answered ${score}/${quizData.length} questions correctly.`,
+            html: `You answered ${score} of ${quizData.length} questions correctly.`,
             confirmButtonText: 'Restart',
             icon: 'info'
         }).then(() => {
