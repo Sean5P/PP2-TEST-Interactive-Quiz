@@ -10,7 +10,7 @@ This Interactive Trivia Quiz is a web-based application designed to offer users 
 
 [Project Repository](https://github.com/sean5p/pp2.git)
 
-[Live Site](https://sean5p.github.io/pp2)
+[Live Site](https://sean5p.github.io/PP2/)
 
 ## Table of contents
 
