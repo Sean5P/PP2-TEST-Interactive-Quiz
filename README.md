@@ -188,7 +188,7 @@ THANK YOU VERY MUCH BRIAN
 During the development of the Trivia Quiz project, several challenges and bugs were encountered and subsequently resolved. These issues were largely learning experiences, attributable to the intricacies of web development and environment settings.
 
 #### CSS Loading Issue
-- **Problem**: A persistent issue was encountered where the CSS code did not reflect changes as expected in the CodeAnywhere IDE. This issue persisted despite setting up an alternative CSS folder.
+- **Problem**: A persistent issue was encountered where the CSS code did not reflect changes as expected in the CodeAnywhere IDE.
 - **Resolution**: After thorough investigation, it was found that the problem was related to caching in the browser and the way CodeAnywhere handles file updates. Clearing the browser cache and ensuring proper file path references in the HTML resolved the issue. Additionally, switching to local development and using version control more effectively helped in tracking changes and avoiding loss of work.
 
 #### Git Version Control
