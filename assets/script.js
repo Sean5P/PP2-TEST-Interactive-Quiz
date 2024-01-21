@@ -4,7 +4,7 @@
 
 // Fetch API questions
 async function fetchRandomQuestions(numberOfQuestions) {
-    const apiUrl = 'https://sean5p.github.io/PP2/data/questions.json';
+    const apiUrl = 'https://sean5p.github.io/PP2-TEST-Interactive-Quiz/data/questions.json';
     try {
         const response = await fetch(apiUrl);
         let data = await response.json();
