@@ -8,7 +8,7 @@ This Interactive Trivia Quiz is a web-based application designed to offer users 
 
 ! [Multi-Screen Image](assets/images/pp2-multiscreenview1.png)
 
-[Project Repository](https://github.com/sean5p/pp2-TEST-Interactive-Quiz.git)
+[Project Repository](https://github.com/sean5p/PP2-TEST-Interactive-Quiz.git)
 
 [Live Site](https://sean5p.github.io/PP2-TEST-Interactive-Quiz/)
 
