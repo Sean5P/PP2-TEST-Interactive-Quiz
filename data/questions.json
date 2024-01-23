@@ -1,272 +1,248 @@
+
 [
   {
     "question": "What is the smallest planet in our solar system?",
     "correct_answer": "Mercury",
-    "incorrect_answers": [
-      "Mars",
-      "Venus",
-      "Earth"
-    ]
+    "incorrect_answers": ["Mars", "Venus", "Earth"]
   },
   {
     "question": "Which element is represented by the symbol 'O' in the periodic table?",
     "correct_answer": "Oxygen",
-    "incorrect_answers": [
-      "Gold",
-      "Silver",
-      "Iron"
-    ]
+    "incorrect_answers": ["Gold", "Silver", "Iron"]
   },
   {
     "question": "What is the largest mammal in the world?",
     "correct_answer": "Blue whale",
-    "incorrect_answers": [
-      "Elephant",
-      "Giraffe",
-      "Hippopotamus"
-    ]
+    "incorrect_answers": ["Elephant", "Giraffe", "Hippopotamus"]
   },
   {
     "question": "Which country is known as the Land of the Rising Sun?",
     "correct_answer": "Japan",
-    "incorrect_answers": [
-      "China",
-      "South Korea",
-      "Thailand"
-    ]
+    "incorrect_answers": ["China", "South Korea", "Thailand"]
   },
   {
     "question": "What is the main ingredient in guacamole?",
     "correct_answer": "Avocado",
-    "incorrect_answers": [
-      "Tomato",
-      "Potato",
-      "Cucumber"
-    ]
+    "incorrect_answers": ["Tomato", "Potato", "Cucumber"]
   },
   {
     "question": "Which gas is most abundant in the Earth's atmosphere?",
     "correct_answer": "Nitrogen",
-    "incorrect_answers": [
-      "Oxygen",
-      "Carbon Dioxide",
-      "Hydrogen"
-    ]
+    "incorrect_answers": ["Oxygen", "Carbon Dioxide", "Hydrogen"]
   },
   {
     "question": "What is the hardest natural substance on Earth?",
     "correct_answer": "Diamond",
-    "incorrect_answers": [
-      "Quartz",
-      "Ruby",
-      "Sapphire"
-    ]
+    "incorrect_answers": ["Quartz", "Ruby", "Sapphire"]
   },
   {
     "question": "Which planet in our solar system has the most moons?",
     "correct_answer": "Jupiter",
-    "incorrect_answers": [
-      "Saturn",
-      "Uranus",
-      "Neptune"
-    ]
+    "incorrect_answers": ["Saturn", "Uranus", "Neptune"]
   },
   {
     "question": "Who invented the telephone?",
     "correct_answer": "Alexander Graham Bell",
-    "incorrect_answers": [
-      "Thomas Edison",
-      "Nikola Tesla",
-      "Marie Curie"
-    ]
+    "incorrect_answers": ["Thomas Edison", "Nikola Tesla", "Marie Curie"]
   },
   {
     "question": "What is the chemical symbol for gold?",
     "correct_answer": "Au",
-    "incorrect_answers": [
-      "Ag",
-      "Fe",
-      "Cu"
-    ]
+    "incorrect_answers": ["Ag", "Fe", "Cu"]
   },
   {
     "question": "What is the capital of Canada?",
     "correct_answer": "Ottawa",
-    "incorrect_answers": [
-      "Toronto",
-      "Montreal",
-      "Vancouver"
-    ]
+    "incorrect_answers": ["Toronto", "Montreal", "Vancouver"]
   },
   {
     "question": "Who is known as the 'Father of History'?",
     "correct_answer": "Herodotus",
-    "incorrect_answers": [
-      "Socrates",
-      "Aristotle",
-      "Plato"
-    ]
+    "incorrect_answers": ["Socrates", "Aristotle", "Plato"]
   },
   {
     "question": "What is the largest rainforest in the world?",
     "correct_answer": "Amazon Rainforest",
-    "incorrect_answers": [
-      "Congo Rainforest",
-      "Daintree Rainforest",
-      "Sundarbans"
-    ]
+    "incorrect_answers": ["Congo Rainforest", "Daintree Rainforest", "Sundarbans"]
   },
   {
     "question": "Who was the first female Prime Minister of the United Kingdom?",
     "correct_answer": "Margaret Thatcher",
-    "incorrect_answers": [
-      "Theresa May",
-      "Angela Merkel",
-      "Indira Gandhi"
-    ]
+    "incorrect_answers": ["Theresa May", "Angela Merkel", "Indira Gandhi"]
   },
   {
     "question": "What is the pH value of pure water?",
     "correct_answer": "7",
-    "incorrect_answers": [
-      "5",
-      "9",
-      "11"
-    ]
+    "incorrect_answers": ["5", "9", "11"]
   },
   {
     "question": "Which country is known for inventing the sport of cricket?",
     "correct_answer": "England",
-    "incorrect_answers": [
-      "Australia",
-      "India",
-      "South Africa"
-    ]
+    "incorrect_answers": ["Australia", "India", "South Africa"]
   },
   {
     "question": "What is the capital city of Japan?",
     "correct_answer": "Tokyo",
-    "incorrect_answers": [
-      "Osaka",
-      "Kyoto",
-      "Hiroshima"
-    ]
+    "incorrect_answers": ["Osaka", "Kyoto", "Hiroshima"]
   },
   {
     "question": "In which year did World War I begin?",
     "correct_answer": "1914",
-    "incorrect_answers": [
-      "1912",
-      "1916",
-      "1918"
-    ]
+    "incorrect_answers": ["1912", "1916", "1918"]
   },
   {
     "question": "Who discovered penicillin?",
     "correct_answer": "Alexander Fleming",
-    "incorrect_answers": [
-      "Marie Curie",
-      "Louis Pasteur",
-      "Thomas Edison"
-    ]
+    "incorrect_answers": ["Marie Curie", "Louis Pasteur", "Thomas Edison"]
   },
   {
     "question": "Which is the longest river in the United States?",
     "correct_answer": "Mississippi River",
-    "incorrect_answers": [
-      "Missouri River",
-      "Colorado River",
-      "Rio Grande"
-    ]
+    "incorrect_answers": ["Missouri River", "Colorado River", "Rio Grande"]
   },
   {
     "question": "What is the name of the world's largest coral reef system?",
     "correct_answer": "Great Barrier Reef",
-    "incorrect_answers": [
-      "Red Sea Coral Reef",
-      "New Caledonia Barrier Reef",
-      "Mesoamerican Barrier Reef"
-    ]
+    "incorrect_answers": ["Red Sea Coral Reef", "New Caledonia Barrier Reef", "Mesoamerican Barrier Reef"]
   },
   {
     "question": "Who is the author of 'Pride and Prejudice'?",
     "correct_answer": "Jane Austen",
-    "incorrect_answers": [
-      "Charlotte Brontë",
-      "Emily Brontë",
-      "Charles Dickens"
-    ]
+    "incorrect_answers": ["Charlotte Brontë", "Emily Brontë", "Charles Dickens"]
   },
   {
     "question": "What is the capital of Spain?",
     "correct_answer": "Madrid",
-    "incorrect_answers": [
-      "Barcelona",
-      "Seville",
-      "Valencia"
-    ]
+    "incorrect_answers": ["Barcelona", "Seville", "Valencia"]
   },
   {
     "question": "Which planet is closest to the sun?",
     "correct_answer": "Mercury",
-    "incorrect_answers": [
-      "Venus",
-      "Earth",
-      "Mars"
-    ]
+    "incorrect_answers": ["Venus", "Earth", "Mars"]
   },
   {
     "question": "What is the name of the largest ocean on Earth?",
     "correct_answer": "Pacific Ocean",
-    "incorrect_answers": [
-      "Atlantic Ocean",
-      "Indian Ocean",
-      "Arctic Ocean"
-    ]
+    "incorrect_answers": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean"]
   },
   {
     "question": "Who was the first person to walk on the moon?",
     "correct_answer": "Neil Armstrong",
-    "incorrect_answers": [
-      "Buzz Aldrin",
-      "Yuri Gagarin",
-      "John Glenn"
-    ]
+    "incorrect_answers": ["Buzz Aldrin", "Yuri Gagarin", "John Glenn"]
   },
   {
     "question": "What is the main ingredient in chocolate?",
     "correct_answer": "Cocoa",
-    "incorrect_answers": [
-      "Milk",
-      "Sugar",
-      "Flour"
-    ]
+    "incorrect_answers": ["Milk", "Sugar", "Flour"]
   },
   {
     "question": "Who wrote 'The Odyssey'?",
     "correct_answer": "Homer",
-    "incorrect_answers": [
-      "Virgil",
-      "Sophocles",
-      "Aristophanes"
-    ]
+    "incorrect_answers": ["Virgil", "Sophocles", "Aristophanes"]
   },
   {
     "question": "What is the largest continent by land area?",
     "correct_answer": "Asia",
-    "incorrect_answers": [
-      "Africa",
-      "North America",
-      "Europe"
-    ]
+    "incorrect_answers": ["Africa", "North America", "Europe"]
   },
   {
     "question": "Which animal is known as the King of the Jungle?",
+    "correct_answer": "Lion",
+    "incorrect_answers": ["Tiger", "Elephant", "Gorilla"]
+  },
+  {
+    "question": "What is the main component of glass?",
+    "correct_answer": "Sand",
+    "incorrect_answers": ["Clay", "Plastic", "Wood"]
+  },
+  {
+    "question": "In which city is the Louvre Museum located?",
+    "correct_answer": "Paris",
+    "incorrect_answers": ["London", "New York", "Rome"]
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere during photosynthesis?",
+    "correct_answer": "Carbon Dioxide",
+    "incorrect_answers": ["Oxygen", "Nitrogen", "Hydrogen"]
+  },
+  {
+    "question": "Which country is the largest by area?",
+    "correct_answer": "Russia",
+    "incorrect_answers": ["Canada", "China", "United States"]
+  },
+  {
+    "question": "What is the longest bone in the human body?",
+    "correct_answer": "Femur",
+    "incorrect_answers": ["Tibia", "Humerus", "Spine"]
+  },
+  {
+    "question": "Who painted the 'Mona Lisa'?",
+    "correct_answer": "Leonardo da Vinci",
+    "incorrect_answers": ["Michelangelo", "Raphael", "Vincent van Gogh"]
+  },
+  {
+    "question": "What is the currency of Japan?",
+    "correct_answer": "Yen",
+    "incorrect_answers": ["Won", "Yuan", "Rupee"]
+  },
+  {
+    "question": "What is the boiling point of water at sea level?",
+    "correct_answer": "100°C",
+    "incorrect_answers": ["90°C", "110°C", "120°C"]
+  },
+  {
+    "question": "Which planet is known as the 'Red Planet'?",
+    "correct_answer": "Mars",
+    "incorrect_answers": ["Jupiter", "Saturn", "Venus"]
+  },
+  {
+    "question": "Which country gave the Statue of Liberty to the United States?",
+    "correct_answer": "France",
+    "incorrect_answers": ["United Kingdom", "Germany", "Spain"]
+  },
+  {
+    "question": "In which year did the Titanic sink?",
+    "correct_answer": "1912",
+    "incorrect_answers": ["1910", "1914", "1916"]
+  },
+  {
+    "question": "What is the chemical formula for table salt?",
+    "correct_answer": "NaCl",
+    "incorrect_answers": ["KCl", "LiCl", "MgCl2"]
+  },
+  {
+    "question": "Who wrote 'Romeo and Juliet'?",
+    "correct_answer": "William Shakespeare",
+    "incorrect_answers": ["Jane Austen", "Charles Dickens", "Geoffrey Chaucer"]
+  },
+  {
+    "question": "What is the largest organ in the human body?",
+    "correct_answer": "Skin",
+    "incorrect_answers": ["Heart", "Liver", "Lung"]
+  },
+  {
+     "question": "Which animal is known as the King of the Jungle?",
     "correct_answer": "Lion",
     "incorrect_answers": [
       "Tiger",
       "Elephant",
       "Gorilla"
+  },
+  {
+    "question": "What is the main component of glass?",
+    "correct_answer": "Sand",
+    "incorrect_answers": [
+      "Clay",
+      "Plastic",
+      "Wood"
+  },
+  {
+    "question": "What is the largest desert in the world?",
+    "correct_answer": "Sahara",
+    "incorrect_answers": [
+      "Gobi",
+      "Kalahari",
+      "Arabian"
     ]
   }
 ]
