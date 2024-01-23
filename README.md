@@ -10,7 +10,7 @@ This Interactive Trivia Quiz is a web-based application designed to offer users 
 
 [Project Repository](https://github.com/sean5p/PP2-TEST-Interactive-Quiz.git)
 
-[Live Site](https://sean5p.github.io/PP2-TEST-Interactive-Quiz/)
+[Live Site](https://Sean5p.github.io/PP2-TEST-Interactive-Quiz/)
 
 ## Table of contents
 
@@ -27,7 +27,7 @@ This Interactive Trivia Quiz is a web-based application designed to offer users 
 
 ### How to Use
 To play the quiz:
-1. Visit [Interactive Quiz](https://sean5p.github.io/PP2-TEST-Interactive-Quiz/)
+1. Visit [Interactive Quiz](https://Sean5p.github.io/PP2-TEST-Interactive-Quiz/)
 2. Read the displayed question and select your answer.
 3. Click on "Submit Answer" to proceed to the next question.
 4. After the last question, your score will be displayed.
