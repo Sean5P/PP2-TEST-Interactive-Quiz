@@ -1,4 +1,3 @@
-
 [
   {
     "question": "What is the smallest planet in our solar system?",
@@ -223,26 +222,16 @@
   {
      "question": "Which animal is known as the King of the Jungle?",
     "correct_answer": "Lion",
-    "incorrect_answers": [
-      "Tiger",
-      "Elephant",
-      "Gorilla"
+    "incorrect_answers": ["Tiger", "Elephant", "Gorilla"]
   },
   {
     "question": "What is the main component of glass?",
     "correct_answer": "Sand",
-    "incorrect_answers": [
-      "Clay",
-      "Plastic",
-      "Wood"
+    "incorrect_answers": ["Clay", "Plastic", "Wood"]
   },
   {
     "question": "What is the largest desert in the world?",
     "correct_answer": "Sahara",
-    "incorrect_answers": [
-      "Gobi",
-      "Kalahari",
-      "Arabian"
-    ]
+    "incorrect_answers": ["Gobi", "Kalahari", "Arabian"]
   }
 ]
